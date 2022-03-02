@@ -1,0 +1,322 @@
+[2022-03-02 00:36:05,938] {processor.py:163} INFO - Started process (PID=39) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:36:05,947] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:36:05,948] {logging_mixin.py:109} INFO - [2022-03-02 00:36:05,948] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:36:11,354] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:36:11,401] {logging_mixin.py:109} INFO - [2022-03-02 00:36:11,401] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:36:11,457] {logging_mixin.py:109} INFO - [2022-03-02 00:36:11,457] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:36:11,498] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 5.574 seconds
+[2022-03-02 00:36:42,151] {processor.py:163} INFO - Started process (PID=76) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:36:42,153] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:36:42,154] {logging_mixin.py:109} INFO - [2022-03-02 00:36:42,154] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:36:42,987] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:36:42,997] {logging_mixin.py:109} INFO - [2022-03-02 00:36:42,997] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:36:43,014] {logging_mixin.py:109} INFO - [2022-03-02 00:36:43,014] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:36:43,023] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.875 seconds
+[2022-03-02 00:37:13,267] {processor.py:163} INFO - Started process (PID=104) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:37:13,268] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:37:13,269] {logging_mixin.py:109} INFO - [2022-03-02 00:37:13,269] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:37:14,086] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:37:14,096] {logging_mixin.py:109} INFO - [2022-03-02 00:37:14,095] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:37:14,111] {logging_mixin.py:109} INFO - [2022-03-02 00:37:14,111] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:37:14,120] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.857 seconds
+[2022-03-02 00:37:44,471] {processor.py:163} INFO - Started process (PID=142) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:37:44,473] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:37:44,473] {logging_mixin.py:109} INFO - [2022-03-02 00:37:44,473] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:37:45,278] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:37:45,287] {logging_mixin.py:109} INFO - [2022-03-02 00:37:45,287] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:37:45,304] {logging_mixin.py:109} INFO - [2022-03-02 00:37:45,304] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:37:45,312] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.846 seconds
+[2022-03-02 00:38:15,712] {processor.py:163} INFO - Started process (PID=171) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:38:15,715] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:38:15,716] {logging_mixin.py:109} INFO - [2022-03-02 00:38:15,716] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:38:16,760] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:38:16,769] {logging_mixin.py:109} INFO - [2022-03-02 00:38:16,769] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:38:16,786] {logging_mixin.py:109} INFO - [2022-03-02 00:38:16,786] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:38:16,797] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 1.090 seconds
+[2022-03-02 00:38:46,849] {processor.py:163} INFO - Started process (PID=211) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:38:46,851] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:38:46,852] {logging_mixin.py:109} INFO - [2022-03-02 00:38:46,852] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:38:47,628] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:38:47,637] {logging_mixin.py:109} INFO - [2022-03-02 00:38:47,637] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:38:47,653] {logging_mixin.py:109} INFO - [2022-03-02 00:38:47,653] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:38:47,662] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.817 seconds
+[2022-03-02 00:39:17,985] {processor.py:163} INFO - Started process (PID=244) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:39:17,987] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:39:17,987] {logging_mixin.py:109} INFO - [2022-03-02 00:39:17,987] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:39:18,810] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:39:18,819] {logging_mixin.py:109} INFO - [2022-03-02 00:39:18,819] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:39:18,836] {logging_mixin.py:109} INFO - [2022-03-02 00:39:18,836] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:39:18,844] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.863 seconds
+[2022-03-02 00:39:49,081] {processor.py:163} INFO - Started process (PID=285) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:39:49,083] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:39:49,084] {logging_mixin.py:109} INFO - [2022-03-02 00:39:49,084] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:39:49,948] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:39:49,958] {logging_mixin.py:109} INFO - [2022-03-02 00:39:49,957] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:39:49,975] {logging_mixin.py:109} INFO - [2022-03-02 00:39:49,975] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:39:49,983] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.908 seconds
+[2022-03-02 00:40:20,512] {processor.py:163} INFO - Started process (PID=314) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:40:20,514] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:40:20,515] {logging_mixin.py:109} INFO - [2022-03-02 00:40:20,515] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:40:21,308] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:40:21,319] {logging_mixin.py:109} INFO - [2022-03-02 00:40:21,318] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:40:21,335] {logging_mixin.py:109} INFO - [2022-03-02 00:40:21,335] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:40:21,343] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.835 seconds
+[2022-03-02 00:40:51,643] {processor.py:163} INFO - Started process (PID=353) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:40:51,645] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:40:51,646] {logging_mixin.py:109} INFO - [2022-03-02 00:40:51,646] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:40:52,527] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:40:52,542] {logging_mixin.py:109} INFO - [2022-03-02 00:40:52,541] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:40:52,564] {logging_mixin.py:109} INFO - [2022-03-02 00:40:52,564] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:40:52,574] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.935 seconds
+[2022-03-02 00:41:22,769] {processor.py:163} INFO - Started process (PID=381) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:41:22,774] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:41:22,774] {logging_mixin.py:109} INFO - [2022-03-02 00:41:22,774] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:41:23,574] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:41:23,585] {logging_mixin.py:109} INFO - [2022-03-02 00:41:23,584] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:41:23,600] {logging_mixin.py:109} INFO - [2022-03-02 00:41:23,600] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:41:23,608] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.843 seconds
+[2022-03-02 00:41:53,909] {processor.py:163} INFO - Started process (PID=419) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:41:53,910] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:41:53,911] {logging_mixin.py:109} INFO - [2022-03-02 00:41:53,911] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:41:54,782] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:41:54,795] {logging_mixin.py:109} INFO - [2022-03-02 00:41:54,795] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:41:54,819] {logging_mixin.py:109} INFO - [2022-03-02 00:41:54,819] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:41:54,830] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.926 seconds
+[2022-03-02 00:42:25,036] {processor.py:163} INFO - Started process (PID=450) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:42:25,037] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:42:25,038] {logging_mixin.py:109} INFO - [2022-03-02 00:42:25,038] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:42:25,906] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:42:25,919] {logging_mixin.py:109} INFO - [2022-03-02 00:42:25,919] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:42:25,935] {logging_mixin.py:109} INFO - [2022-03-02 00:42:25,935] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:42:25,944] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.912 seconds
+[2022-03-02 00:42:56,153] {processor.py:163} INFO - Started process (PID=490) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:42:56,155] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:42:56,156] {logging_mixin.py:109} INFO - [2022-03-02 00:42:56,156] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:42:57,054] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:42:57,064] {logging_mixin.py:109} INFO - [2022-03-02 00:42:57,064] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:42:57,079] {logging_mixin.py:109} INFO - [2022-03-02 00:42:57,079] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:42:57,087] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.939 seconds
+[2022-03-02 00:43:27,297] {processor.py:163} INFO - Started process (PID=518) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:43:27,300] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:43:27,300] {logging_mixin.py:109} INFO - [2022-03-02 00:43:27,300] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:43:28,095] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:43:28,104] {logging_mixin.py:109} INFO - [2022-03-02 00:43:28,104] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:43:28,121] {logging_mixin.py:109} INFO - [2022-03-02 00:43:28,120] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:43:28,130] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.837 seconds
+[2022-03-02 00:43:58,468] {processor.py:163} INFO - Started process (PID=558) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:43:58,471] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:43:58,472] {logging_mixin.py:109} INFO - [2022-03-02 00:43:58,472] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:43:59,267] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:43:59,277] {logging_mixin.py:109} INFO - [2022-03-02 00:43:59,276] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:43:59,293] {logging_mixin.py:109} INFO - [2022-03-02 00:43:59,293] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:43:59,302] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.839 seconds
+[2022-03-02 00:44:29,614] {processor.py:163} INFO - Started process (PID=588) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:44:29,615] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:44:29,616] {logging_mixin.py:109} INFO - [2022-03-02 00:44:29,616] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:44:30,385] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:44:30,395] {logging_mixin.py:109} INFO - [2022-03-02 00:44:30,394] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:44:30,410] {logging_mixin.py:109} INFO - [2022-03-02 00:44:30,410] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:44:30,418] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.809 seconds
+[2022-03-02 00:45:00,746] {processor.py:163} INFO - Started process (PID=619) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:45:00,748] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:45:00,749] {logging_mixin.py:109} INFO - [2022-03-02 00:45:00,749] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:45:02,064] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:45:02,079] {logging_mixin.py:109} INFO - [2022-03-02 00:45:02,078] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:45:02,103] {logging_mixin.py:109} INFO - [2022-03-02 00:45:02,103] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:45:02,114] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 1.374 seconds
+[2022-03-02 00:45:32,240] {processor.py:163} INFO - Started process (PID=661) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:45:32,242] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:45:32,243] {logging_mixin.py:109} INFO - [2022-03-02 00:45:32,243] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:45:33,056] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:45:33,066] {logging_mixin.py:109} INFO - [2022-03-02 00:45:33,065] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:45:33,081] {logging_mixin.py:109} INFO - [2022-03-02 00:45:33,081] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:45:33,089] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.853 seconds
+[2022-03-02 00:46:03,597] {processor.py:163} INFO - Started process (PID=690) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:46:03,599] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:46:03,599] {logging_mixin.py:109} INFO - [2022-03-02 00:46:03,599] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:46:04,453] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:46:04,463] {logging_mixin.py:109} INFO - [2022-03-02 00:46:04,462] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:46:04,478] {logging_mixin.py:109} INFO - [2022-03-02 00:46:04,478] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:46:04,487] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.893 seconds
+[2022-03-02 00:46:34,709] {processor.py:163} INFO - Started process (PID=729) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:46:34,711] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:46:34,712] {logging_mixin.py:109} INFO - [2022-03-02 00:46:34,712] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:46:35,564] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:46:35,573] {logging_mixin.py:109} INFO - [2022-03-02 00:46:35,573] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:46:35,589] {logging_mixin.py:109} INFO - [2022-03-02 00:46:35,589] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:46:35,597] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.892 seconds
+[2022-03-02 00:47:05,890] {processor.py:163} INFO - Started process (PID=757) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:47:05,892] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:47:05,893] {logging_mixin.py:109} INFO - [2022-03-02 00:47:05,893] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:47:06,712] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:47:06,721] {logging_mixin.py:109} INFO - [2022-03-02 00:47:06,721] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:47:06,738] {logging_mixin.py:109} INFO - [2022-03-02 00:47:06,737] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:47:06,747] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.860 seconds
+[2022-03-02 00:47:36,998] {processor.py:163} INFO - Started process (PID=796) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:47:37,000] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:47:37,000] {logging_mixin.py:109} INFO - [2022-03-02 00:47:37,000] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:47:37,808] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:47:37,818] {logging_mixin.py:109} INFO - [2022-03-02 00:47:37,818] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:47:37,833] {logging_mixin.py:109} INFO - [2022-03-02 00:47:37,833] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:47:37,842] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.848 seconds
+[2022-03-02 00:48:08,198] {processor.py:163} INFO - Started process (PID=827) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:48:08,200] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:48:08,201] {logging_mixin.py:109} INFO - [2022-03-02 00:48:08,201] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:48:09,080] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:48:09,090] {logging_mixin.py:109} INFO - [2022-03-02 00:48:09,090] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:48:09,108] {logging_mixin.py:109} INFO - [2022-03-02 00:48:09,108] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:48:09,117] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.923 seconds
+[2022-03-02 00:48:39,339] {processor.py:163} INFO - Started process (PID=867) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:48:39,341] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:48:39,342] {logging_mixin.py:109} INFO - [2022-03-02 00:48:39,342] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:48:40,154] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:48:40,163] {logging_mixin.py:109} INFO - [2022-03-02 00:48:40,163] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:48:40,179] {logging_mixin.py:109} INFO - [2022-03-02 00:48:40,179] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:48:40,188] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.853 seconds
+[2022-03-02 00:49:10,532] {processor.py:163} INFO - Started process (PID=896) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:49:10,534] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:49:10,535] {logging_mixin.py:109} INFO - [2022-03-02 00:49:10,535] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:49:11,596] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:49:11,610] {logging_mixin.py:109} INFO - [2022-03-02 00:49:11,609] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:49:11,631] {logging_mixin.py:109} INFO - [2022-03-02 00:49:11,631] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:49:11,648] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 1.120 seconds
+[2022-03-02 00:49:41,864] {processor.py:163} INFO - Started process (PID=937) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:49:41,866] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:49:41,867] {logging_mixin.py:109} INFO - [2022-03-02 00:49:41,867] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:49:42,665] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:49:42,674] {logging_mixin.py:109} INFO - [2022-03-02 00:49:42,674] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:49:42,690] {logging_mixin.py:109} INFO - [2022-03-02 00:49:42,690] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:49:42,699] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.839 seconds
+[2022-03-02 00:50:13,194] {processor.py:163} INFO - Started process (PID=970) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:50:13,195] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:50:13,196] {logging_mixin.py:109} INFO - [2022-03-02 00:50:13,196] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:50:14,078] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:50:14,091] {logging_mixin.py:109} INFO - [2022-03-02 00:50:14,090] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:50:14,111] {logging_mixin.py:109} INFO - [2022-03-02 00:50:14,111] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:50:14,119] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.929 seconds
+[2022-03-02 00:50:44,307] {processor.py:163} INFO - Started process (PID=1007) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:50:44,311] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:50:44,312] {logging_mixin.py:109} INFO - [2022-03-02 00:50:44,311] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:50:45,174] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:50:45,184] {logging_mixin.py:109} INFO - [2022-03-02 00:50:45,183] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:50:45,200] {logging_mixin.py:109} INFO - [2022-03-02 00:50:45,200] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:50:45,209] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.906 seconds
+[2022-03-02 00:51:15,436] {processor.py:163} INFO - Started process (PID=1037) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:51:15,437] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:51:15,438] {logging_mixin.py:109} INFO - [2022-03-02 00:51:15,438] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:51:16,256] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:51:16,265] {logging_mixin.py:109} INFO - [2022-03-02 00:51:16,265] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:51:16,281] {logging_mixin.py:109} INFO - [2022-03-02 00:51:16,281] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:51:16,290] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.859 seconds
+[2022-03-02 00:51:46,584] {processor.py:163} INFO - Started process (PID=1076) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:51:46,586] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:51:46,587] {logging_mixin.py:109} INFO - [2022-03-02 00:51:46,587] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:51:47,378] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:51:47,389] {logging_mixin.py:109} INFO - [2022-03-02 00:51:47,388] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:51:47,410] {logging_mixin.py:109} INFO - [2022-03-02 00:51:47,410] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:51:47,419] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.839 seconds
+[2022-03-02 00:52:17,708] {processor.py:163} INFO - Started process (PID=1105) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:52:17,709] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:52:17,710] {logging_mixin.py:109} INFO - [2022-03-02 00:52:17,710] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:52:18,522] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:52:18,531] {logging_mixin.py:109} INFO - [2022-03-02 00:52:18,531] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:52:18,546] {logging_mixin.py:109} INFO - [2022-03-02 00:52:18,546] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:52:18,554] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.851 seconds
+[2022-03-02 00:52:48,869] {processor.py:163} INFO - Started process (PID=1145) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:52:48,870] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:52:48,871] {logging_mixin.py:109} INFO - [2022-03-02 00:52:48,871] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:52:49,637] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:52:49,646] {logging_mixin.py:109} INFO - [2022-03-02 00:52:49,646] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:52:49,662] {logging_mixin.py:109} INFO - [2022-03-02 00:52:49,661] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:52:49,669] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.805 seconds
+[2022-03-02 00:53:20,014] {processor.py:163} INFO - Started process (PID=1173) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:53:20,015] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:53:20,016] {logging_mixin.py:109} INFO - [2022-03-02 00:53:20,016] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:53:20,981] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:53:20,990] {logging_mixin.py:109} INFO - [2022-03-02 00:53:20,990] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:53:21,005] {logging_mixin.py:109} INFO - [2022-03-02 00:53:21,005] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:53:21,015] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 1.005 seconds
+[2022-03-02 00:53:51,139] {processor.py:163} INFO - Started process (PID=1218) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:53:51,140] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:53:51,141] {logging_mixin.py:109} INFO - [2022-03-02 00:53:51,141] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:53:51,909] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:53:51,918] {logging_mixin.py:109} INFO - [2022-03-02 00:53:51,918] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:53:51,935] {logging_mixin.py:109} INFO - [2022-03-02 00:53:51,935] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:53:51,944] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.810 seconds
+[2022-03-02 00:54:22,474] {processor.py:163} INFO - Started process (PID=1248) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:54:22,476] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:54:22,476] {logging_mixin.py:109} INFO - [2022-03-02 00:54:22,476] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:54:23,282] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:54:23,292] {logging_mixin.py:109} INFO - [2022-03-02 00:54:23,291] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:54:23,308] {logging_mixin.py:109} INFO - [2022-03-02 00:54:23,308] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:54:23,317] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.847 seconds
+[2022-03-02 00:54:53,590] {processor.py:163} INFO - Started process (PID=1286) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:54:53,592] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:54:53,593] {logging_mixin.py:109} INFO - [2022-03-02 00:54:53,593] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:54:54,783] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:54:54,805] {logging_mixin.py:109} INFO - [2022-03-02 00:54:54,804] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:54:54,832] {logging_mixin.py:109} INFO - [2022-03-02 00:54:54,832] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:54:54,853] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 1.268 seconds
+[2022-03-02 00:55:25,707] {processor.py:163} INFO - Started process (PID=1315) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:55:25,709] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:55:25,710] {logging_mixin.py:109} INFO - [2022-03-02 00:55:25,710] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:55:26,568] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:55:26,577] {logging_mixin.py:109} INFO - [2022-03-02 00:55:26,577] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:55:26,593] {logging_mixin.py:109} INFO - [2022-03-02 00:55:26,593] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:55:26,602] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.899 seconds
+[2022-03-02 00:55:56,945] {processor.py:163} INFO - Started process (PID=1356) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:55:56,947] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:55:56,947] {logging_mixin.py:109} INFO - [2022-03-02 00:55:56,947] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:55:57,903] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:55:57,912] {logging_mixin.py:109} INFO - [2022-03-02 00:55:57,912] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:55:57,929] {logging_mixin.py:109} INFO - [2022-03-02 00:55:57,929] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:55:57,938] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.998 seconds
+[2022-03-02 00:56:28,076] {processor.py:163} INFO - Started process (PID=1386) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:56:28,080] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:56:28,080] {logging_mixin.py:109} INFO - [2022-03-02 00:56:28,080] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:56:28,908] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:56:28,919] {logging_mixin.py:109} INFO - [2022-03-02 00:56:28,919] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:56:28,936] {logging_mixin.py:109} INFO - [2022-03-02 00:56:28,936] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:56:28,945] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.874 seconds
+[2022-03-02 00:56:59,316] {processor.py:163} INFO - Started process (PID=1424) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:56:59,319] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:56:59,320] {logging_mixin.py:109} INFO - [2022-03-02 00:56:59,320] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:57:00,447] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:57:00,464] {logging_mixin.py:109} INFO - [2022-03-02 00:57:00,464] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:57:00,488] {logging_mixin.py:109} INFO - [2022-03-02 00:57:00,488] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:57:00,500] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 1.189 seconds
+[2022-03-02 00:57:30,624] {processor.py:163} INFO - Started process (PID=1453) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:57:30,626] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:57:30,627] {logging_mixin.py:109} INFO - [2022-03-02 00:57:30,627] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:57:31,630] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:57:31,641] {logging_mixin.py:109} INFO - [2022-03-02 00:57:31,641] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:57:31,656] {logging_mixin.py:109} INFO - [2022-03-02 00:57:31,656] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:57:31,665] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 1.046 seconds
+[2022-03-02 00:58:01,780] {processor.py:163} INFO - Started process (PID=1494) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:58:01,783] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:58:01,784] {logging_mixin.py:109} INFO - [2022-03-02 00:58:01,783] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:58:02,752] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:58:02,769] {logging_mixin.py:109} INFO - [2022-03-02 00:58:02,769] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:58:02,790] {logging_mixin.py:109} INFO - [2022-03-02 00:58:02,790] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:58:02,801] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 1.025 seconds
+[2022-03-02 00:58:32,919] {processor.py:163} INFO - Started process (PID=1524) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:58:32,921] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:58:32,921] {logging_mixin.py:109} INFO - [2022-03-02 00:58:32,921] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:58:33,757] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:58:33,772] {logging_mixin.py:109} INFO - [2022-03-02 00:58:33,771] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:58:33,794] {logging_mixin.py:109} INFO - [2022-03-02 00:58:33,794] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:58:33,804] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.889 seconds
+[2022-03-02 00:59:04,335] {processor.py:163} INFO - Started process (PID=1563) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:59:04,337] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:59:04,338] {logging_mixin.py:109} INFO - [2022-03-02 00:59:04,338] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:59:05,236] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:59:05,246] {logging_mixin.py:109} INFO - [2022-03-02 00:59:05,246] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:59:05,262] {logging_mixin.py:109} INFO - [2022-03-02 00:59:05,262] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:59:05,271] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.941 seconds
+[2022-03-02 00:59:35,467] {processor.py:163} INFO - Started process (PID=1592) to work on /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:59:35,471] {processor.py:642} INFO - Processing file /opt/airflow/dags/ingest_historical_fuel_data_dag.py for tasks to queue
+[2022-03-02 00:59:35,471] {logging_mixin.py:109} INFO - [2022-03-02 00:59:35,471] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:59:36,357] {processor.py:654} INFO - DAG(s) dict_keys(['historical_fuel_data_ingestion']) retrieved from /opt/airflow/dags/ingest_historical_fuel_data_dag.py
+[2022-03-02 00:59:36,370] {logging_mixin.py:109} INFO - [2022-03-02 00:59:36,369] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-03-02 00:59:36,392] {logging_mixin.py:109} INFO - [2022-03-02 00:59:36,392] {dag.py:2937} INFO - Setting next_dagrun for historical_fuel_data_ingestion to 2022-02-25T10:00:00+00:00
+[2022-03-02 00:59:36,403] {processor.py:171} INFO - Processing /opt/airflow/dags/ingest_historical_fuel_data_dag.py took 0.942 seconds

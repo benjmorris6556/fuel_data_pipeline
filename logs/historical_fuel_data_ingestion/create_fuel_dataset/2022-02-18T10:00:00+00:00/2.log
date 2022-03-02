@@ -1,0 +1,176 @@
+[2022-02-27 22:10:07,269] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: historical_fuel_data_ingestion.create_fuel_dataset scheduled__2022-02-18T10:00:00+00:00 [queued]>
+[2022-02-27 22:10:07,280] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: historical_fuel_data_ingestion.create_fuel_dataset scheduled__2022-02-18T10:00:00+00:00 [queued]>
+[2022-02-27 22:10:07,280] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-27 22:10:07,280] {taskinstance.py:1244} INFO - Starting attempt 2 of 2
+[2022-02-27 22:10:07,281] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-27 22:10:07,292] {taskinstance.py:1264} INFO - Executing <Task(PythonOperator): create_fuel_dataset> on 2022-02-18 10:00:00+00:00
+[2022-02-27 22:10:07,299] {standard_task_runner.py:52} INFO - Started process 328 to run task
+[2022-02-27 22:10:07,306] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'historical_fuel_data_ingestion', 'create_fuel_dataset', 'scheduled__2022-02-18T10:00:00+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/ingest_historical_fuel_data_dag.py', '--cfg-path', '/tmp/tmpdwqltbf4', '--error-file', '/tmp/tmpm8em0xmn']
+[2022-02-27 22:10:07,307] {standard_task_runner.py:77} INFO - Job 72: Subtask create_fuel_dataset
+[2022-02-27 22:10:07,371] {logging_mixin.py:109} INFO - Running <TaskInstance: historical_fuel_data_ingestion.create_fuel_dataset scheduled__2022-02-18T10:00:00+00:00 [running]> on host daf54b46ba6b
+[2022-02-27 22:10:07,411] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-02-27 22:10:07,433] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=historical_fuel_data_ingestion
+AIRFLOW_CTX_TASK_ID=create_fuel_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-18T10:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-18T10:00:00+00:00
+[2022-02-27 22:10:07,438] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_historical_fuel_data_dag.py", line 29, in get_historical_fuel_data
+    src_file, sheet_name="Diesel TGP"
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1233, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_openpyxl.py", line 521, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/_optional.py", line 118, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+[2022-02-27 22:10:07,451] {taskinstance.py:1282} INFO - Marking task as FAILED. dag_id=historical_fuel_data_ingestion, task_id=create_fuel_dataset, execution_date=20220218T100000, start_date=20220227T221007, end_date=20220227T221007
+[2022-02-27 22:10:07,465] {standard_task_runner.py:92} ERROR - Failed to execute job 72 for task create_fuel_dataset
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_historical_fuel_data_dag.py", line 29, in get_historical_fuel_data
+    src_file, sheet_name="Diesel TGP"
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1233, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_openpyxl.py", line 521, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/_optional.py", line 118, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+[2022-02-27 22:10:07,478] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-02-27 22:10:07,543] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-03-01 03:02:39,053] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: historical_fuel_data_ingestion.create_fuel_dataset scheduled__2022-02-18T10:00:00+00:00 [queued]>
+[2022-03-01 03:02:39,065] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: historical_fuel_data_ingestion.create_fuel_dataset scheduled__2022-02-18T10:00:00+00:00 [queued]>
+[2022-03-01 03:02:39,065] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-01 03:02:39,065] {taskinstance.py:1244} INFO - Starting attempt 2 of 3
+[2022-03-01 03:02:39,065] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-01 03:02:39,077] {taskinstance.py:1264} INFO - Executing <Task(PythonOperator): create_fuel_dataset> on 2022-02-18 10:00:00+00:00
+[2022-03-01 03:02:39,084] {standard_task_runner.py:52} INFO - Started process 145 to run task
+[2022-03-01 03:02:39,091] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'historical_fuel_data_ingestion', 'create_fuel_dataset', 'scheduled__2022-02-18T10:00:00+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/ingest_historical_fuel_data_dag.py', '--cfg-path', '/tmp/tmptxgoum05', '--error-file', '/tmp/tmp_srjb58o']
+[2022-03-01 03:02:39,093] {standard_task_runner.py:77} INFO - Job 110: Subtask create_fuel_dataset
+[2022-03-01 03:02:39,165] {logging_mixin.py:109} INFO - Running <TaskInstance: historical_fuel_data_ingestion.create_fuel_dataset scheduled__2022-02-18T10:00:00+00:00 [running]> on host f3677dea508a
+[2022-03-01 03:02:39,215] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-03-01 03:02:39,247] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=historical_fuel_data_ingestion
+AIRFLOW_CTX_TASK_ID=create_fuel_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-18T10:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-18T10:00:00+00:00
+[2022-03-01 03:02:39,251] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_historical_fuel_data_dag.py", line 29, in get_historical_fuel_data
+    src_file, sheet_name="Diesel TGP", engine='openpyxl'
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1233, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_openpyxl.py", line 521, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/_optional.py", line 118, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+[2022-03-01 03:02:39,269] {taskinstance.py:1282} INFO - Marking task as UP_FOR_RETRY. dag_id=historical_fuel_data_ingestion, task_id=create_fuel_dataset, execution_date=20220218T100000, start_date=20220301T030239, end_date=20220301T030239
+[2022-03-01 03:02:39,286] {standard_task_runner.py:92} ERROR - Failed to execute job 110 for task create_fuel_dataset
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_historical_fuel_data_dag.py", line 29, in get_historical_fuel_data
+    src_file, sheet_name="Diesel TGP", engine='openpyxl'
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1233, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_openpyxl.py", line 521, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/_optional.py", line 118, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+[2022-03-01 03:02:39,308] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-03-01 03:02:39,355] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

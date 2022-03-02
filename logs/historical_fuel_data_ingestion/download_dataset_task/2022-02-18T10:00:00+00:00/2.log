@@ -1,0 +1,58 @@
+[2022-02-28 05:12:21,285] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: historical_fuel_data_ingestion.download_dataset_task scheduled__2022-02-18T10:00:00+00:00 [queued]>
+[2022-02-28 05:12:21,297] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: historical_fuel_data_ingestion.download_dataset_task scheduled__2022-02-18T10:00:00+00:00 [queued]>
+[2022-02-28 05:12:21,297] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-28 05:12:21,297] {taskinstance.py:1244} INFO - Starting attempt 2 of 3
+[2022-02-28 05:12:21,297] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-28 05:12:21,309] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): download_dataset_task> on 2022-02-18 10:00:00+00:00
+[2022-02-28 05:12:21,316] {standard_task_runner.py:52} INFO - Started process 319 to run task
+[2022-02-28 05:12:21,321] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'historical_fuel_data_ingestion', 'download_dataset_task', 'scheduled__2022-02-18T10:00:00+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/ingest_historical_fuel_data_dag.py', '--cfg-path', '/tmp/tmpze8wr_bj', '--error-file', '/tmp/tmptin9715h']
+[2022-02-28 05:12:21,322] {standard_task_runner.py:77} INFO - Job 82: Subtask download_dataset_task
+[2022-02-28 05:12:21,388] {logging_mixin.py:109} INFO - Running <TaskInstance: historical_fuel_data_ingestion.download_dataset_task scheduled__2022-02-18T10:00:00+00:00 [running]> on host 9a90ef65056a
+[2022-02-28 05:12:21,427] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-02-28 05:12:21,446] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=historical_fuel_data_ingestion
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-18T10:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-18T10:00:00+00:00
+[2022-02-28 05:12:21,447] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-02-28 05:12:21,448] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://www.aip.com.au/sites/default/files/download-files/2022-02/AIP_TGP_Data_18-Feb-2022.xlsx > /opt/***/historical_fuel_data_18-Feb-2022.xlsx']
+[2022-02-28 05:12:21,463] {subprocess.py:85} INFO - Output:
+[2022-02-28 05:12:21,536] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-02-28 05:12:21,568] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=historical_fuel_data_ingestion, task_id=download_dataset_task, execution_date=20220218T100000, start_date=20220228T051221, end_date=20220228T051221
+[2022-02-28 05:12:21,615] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-28 05:12:21,661] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-03-01 03:02:37,643] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: historical_fuel_data_ingestion.download_dataset_task scheduled__2022-02-18T10:00:00+00:00 [queued]>
+[2022-03-01 03:02:37,654] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: historical_fuel_data_ingestion.download_dataset_task scheduled__2022-02-18T10:00:00+00:00 [queued]>
+[2022-03-01 03:02:37,654] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-01 03:02:37,654] {taskinstance.py:1244} INFO - Starting attempt 2 of 3
+[2022-03-01 03:02:37,654] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-01 03:02:37,666] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): download_dataset_task> on 2022-02-18 10:00:00+00:00
+[2022-03-01 03:02:37,672] {standard_task_runner.py:52} INFO - Started process 129 to run task
+[2022-03-01 03:02:37,677] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'historical_fuel_data_ingestion', 'download_dataset_task', 'scheduled__2022-02-18T10:00:00+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/ingest_historical_fuel_data_dag.py', '--cfg-path', '/tmp/tmprx5jj1dg', '--error-file', '/tmp/tmpeqs6_lgu']
+[2022-03-01 03:02:37,678] {standard_task_runner.py:77} INFO - Job 109: Subtask download_dataset_task
+[2022-03-01 03:02:37,757] {logging_mixin.py:109} INFO - Running <TaskInstance: historical_fuel_data_ingestion.download_dataset_task scheduled__2022-02-18T10:00:00+00:00 [running]> on host f3677dea508a
+[2022-03-01 03:02:37,812] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-03-01 03:02:37,833] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=historical_fuel_data_ingestion
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-18T10:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-02-18T10:00:00+00:00
+[2022-03-01 03:02:37,835] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-03-01 03:02:37,836] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSL https://www.aip.com.au/sites/default/files/download-files/2022-02/AIP_TGP_Data_18-Feb-2022.xlsx > /opt/***/historical_fuel_data_18-Feb-2022.xlsx']
+[2022-03-01 03:02:37,851] {subprocess.py:85} INFO - Output:
+[2022-03-01 03:02:37,921] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-03-01 03:02:37,952] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=historical_fuel_data_ingestion, task_id=download_dataset_task, execution_date=20220218T100000, start_date=20220301T030237, end_date=20220301T030237
+[2022-03-01 03:02:37,974] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-03-01 03:02:38,034] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
