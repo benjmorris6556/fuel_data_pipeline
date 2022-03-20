@@ -13,7 +13,7 @@ The DAGs perform the following tasks:
 
 ## Useage
 
-Ensure a .env file exists in the Fuel Data Pipeline that specifies the required enviroment variables. For example:
+Ensure a .env file exists in the main directory that specifies the required enviroment variables. For example:
 
 ```
 GOOGLE_APPLICATION_CREDENTIALS=<PATH_TO_YOUR_GCP_SERVICE_ACCOUNT_CREDS>
