@@ -15,31 +15,28 @@ PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
 
 historical_dataset_url = 'https://www.aip.com.au/sites/default/files/download-files/{{ execution_date.strftime(\'%Y-%m\') }}/AIP_TGP_Data_{{ execution_date.strftime(\'%d-%b-%Y\') }}.xlsx'
-excel_file = 'historical_fuel_data_{{ execution_date.strftime(\'%d-%b-%Y\') }}.xlsx'
-csv_file = excel_file.replace('.xlsx', '.csv')
+csv_file = 'historical_fuel_data_{{ execution_date.strftime(\'%d-%b-%Y\') }}.csv'
 parquet_file = csv_file.replace('.csv', '.parquet')
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 
-BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'customer_fuel_levies')
+BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'daily_fuel_data')
 
-def get_historical_fuel_data(src_file, dest_file):
+def get_historical_fuel_data(source_url, dest_file):
     import pandas as pd
+    import openpyxl
 
     fuel_prices_df = pd.read_excel(
-        src_file, sheet_name="Diesel TGP", engine='openpyxl'
+        source_url, sheet_name="Diesel TGP", engine='openpyxl'
     )
+
     fuel_prices_df = fuel_prices_df.rename(
         columns={
             "National\nAverage": "national_average",
             "AVERAGE DIESEL TGPS\n(inclusive of GST)": "date",
         }
     )
-    fuel_prices_df["date"] = pd.to_datetime(
-        fuel_prices_df["date"]
-    ).dt.date
-    fuel_prices_df["date_created"] = datetime.now()
+
     fuel_prices_df.columns = fuel_prices_df.columns.str.lower()
-    fuel_prices_df = fuel_prices_df.tail(7)
 
     fuel_prices_df.to_csv(dest_file, index=False)
 
@@ -62,7 +59,7 @@ def upload_to_gcs(bucket, object_name, local_file):
 
 default_args = {
     "owner": "airflow",
-    "start_date": datetime(2022, 2, 18),
+    "start_date": datetime(2022, 3, 25),
     "depends_on_past": False,
     "retries": 1,
 }
@@ -71,21 +68,16 @@ with DAG(
     dag_id="historical_fuel_data_ingestion",
     schedule_interval="0 10 * * 5",
     default_args=default_args,
-    catchup=True,
+    catchup=False,
     max_active_runs=3,
     tags=['fuel_data'],
 ) as dag:
-
-    download_dataset_task = BashOperator(
-        task_id="download_dataset_task",
-        bash_command=f"curl -sSL {historical_dataset_url} > {path_to_local_home}/{excel_file}"
-    )
 
     create_dataset_task = PythonOperator(
         task_id="create_fuel_dataset",
         python_callable=get_historical_fuel_data,
         op_kwargs={
-            "src_file": f"{path_to_local_home}/{excel_file}",
+            "source_url": historical_dataset_url,
             "dest_file": f"{path_to_local_home}/{csv_file}",
         },
     )
@@ -103,14 +95,14 @@ with DAG(
         python_callable=upload_to_gcs,
         op_kwargs={
             "bucket": BUCKET,
-            "object_name": f"fuel_prices_raw/historical_fuel_prices_stage/{parquet_file}",
+            "object_name": f"fuel_prices/raw/historical_fuel_prices/{parquet_file}",
             "local_file": f"{path_to_local_home}/{parquet_file}",
         },
     )
 
     delete_local_files_task = BashOperator(
         task_id="delete_local_files_task",
-        bash_command=f"rm {path_to_local_home}/{excel_file} {path_to_local_home}/{csv_file} {path_to_local_home}/{parquet_file}"
+        bash_command=f"rm {path_to_local_home}/{csv_file} {path_to_local_home}/{parquet_file}"
     )
 
     bigquery_external_table_task = BigQueryCreateExternalTableOperator(
@@ -119,13 +111,13 @@ with DAG(
             "tableReference": {
                 "projectId": PROJECT_ID,
                 "datasetId": BIGQUERY_DATASET,
-                "tableId": "stg_historical_fuel_prices",
+                "tableId": "raw_historical_fuel_prices",
             },
             "externalDataConfiguration": {
                 "sourceFormat": "PARQUET",
-                "sourceUris": [f"gs://{BUCKET}/fuel_prices_raw/historical_fuel_prices_stage/{parquet_file}"],
+                "sourceUris": [f"gs://{BUCKET}/fuel_prices/raw/historical_fuel_prices/*"],
             },
         },
     )
 
-    download_dataset_task >> create_dataset_task >> format_to_parquet_task >> local_to_gcs_task >> delete_local_files_task >> bigquery_external_table_task
+    create_dataset_task >> format_to_parquet_task >> local_to_gcs_task >> delete_local_files_task >> bigquery_external_table_task

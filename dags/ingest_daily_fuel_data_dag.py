@@ -13,12 +13,11 @@ from google.cloud import storage
 
 PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
-BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'customer_fuel_levies')
+BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'daily_fuel_data')
 
+path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 csv_file = 'daily_fuel_data_{{ execution_date.strftime(\'%d-%b-%Y\') }}.csv'
 parquet_file = csv_file.replace('.csv', '.parquet')
-path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
-
 
 def get_current_fuel_data(file_destination):
     import json
@@ -27,67 +26,32 @@ def get_current_fuel_data(file_destination):
     import requests
 
     url = "https://www.aip.com.au/aip-api-request?api-path=public/api&call=tgpTables&location="
-    r = requests.get(url)
-    data = json.loads(r.text)
+    results = requests.get(url)
+    fuel_data_json = results.json()
 
-    headers_list = [
-        "sydneyDiesel",
-        "melbourneDiesel",
-        "brisbaneDiesel",
-        "adelaideDiesel",
-        "darwinDiesel",
-        "perthDiesel",
-        "hobartDiesel",
-    ]
-    dfs = []
-    for header in headers_list:
-        state_data = data[header]
-        df = pd.DataFrame(state_data).T
-        dfs.append(df)
-    main_df = pd.concat(dfs)[["date", "location", "fuelPrice"]].rename(
-        columns={"location": "state", "fuelPrice": "fuel_price"}
-    )
+    def create_rows(csv_rows, data):
+        row = {}
+        row['date'] = data['date']
+        row['location'] = data['location']
+        row['fuel_price'] = data['fuelPrice']
+        csv_rows.append(row)
+        
+    csv_rows = []
 
-    main_df["date"] = pd.to_datetime(main_df["date"]).dt.date
-    final_df = main_df.pivot(index="date", columns="state", values="fuel_price")
-    final_df.reset_index(inplace=True)
-    final_df.columns.name = None
-    final_df = final_df[
-        [
-            "date",
-            "Sydney",
-            "Melbourne",
-            "Brisbane",
-            "Adelaide",
-            "Perth",
-            "Darwin",
-            "Hobart",
-        ]
-    ]
-    final_df[
-        ["Sydney", "Melbourne", "Brisbane", "Adelaide", "Perth", "Darwin", "Hobart"]
-    ] = (
-        final_df[
-            ["Sydney", "Melbourne", "Brisbane", "Adelaide", "Perth", "Darwin", "Hobart"]
-        ]
-        .astype(float)
-        .round(1)
-    )
-    final_df["national_average"] = final_df.mean(axis=1).round(1)
-    final_df["date_created"] = datetime.now()
-    final_df.columns = final_df.columns.str.lower()
+    for location, daily_data in fuel_data_json.items():
+        for day, data in daily_data.items():
+            if data['fuelType'] == 'DIESEL' and day == '0':
+                create_rows(csv_rows, data)
+            
+    df = pd.DataFrame.from_dict(csv_rows)
+    df.to_csv(file_destination, index=False)
 
-    final_df.to_csv(file_destination, index=False)
-    print(f'CSV saved to { file_destination }')
-
-def format_to_parquet(src_file):
-    print(src_file)
+def format_to_parquet(src_file, dest_file):
     if not src_file.endswith('.csv'):
         logging.error("Can only accept source files in CSV format, for the moment")
         return
     table = pv.read_csv(src_file)
-    pq.write_table(table, src_file.replace('.csv', '.parquet'))
-    print(f'Parquet saved to {path_to_local_home}/{parquet_file}')
+    pq.write_table(table, dest_file)
 
 def upload_to_gcs(bucket, object_name, local_file):
     storage.blob._MAX_MULTIPART_SIZE = 5 * 1024 * 1024  # 5 MB
@@ -101,7 +65,7 @@ def upload_to_gcs(bucket, object_name, local_file):
 
 default_args = {
     "owner": "airflow",
-    "start_date": datetime.today(),
+    "start_date": datetime(2022, 3, 25),
     "depends_on_past": False,
     "retries": 1,
 }
@@ -120,7 +84,7 @@ with DAG(
         python_callable=get_current_fuel_data,
         op_kwargs={
             "file_destination": f"{path_to_local_home}/{csv_file}",
-        }
+        },
     )
 
     format_to_parquet_task = PythonOperator(
@@ -128,6 +92,7 @@ with DAG(
         python_callable=format_to_parquet,
         op_kwargs={
             "src_file": f"{path_to_local_home}/{csv_file}",
+            "dest_file": f"{path_to_local_home}/{parquet_file}"
         },
     )
 
@@ -136,7 +101,7 @@ with DAG(
         python_callable=upload_to_gcs,
         op_kwargs={
             "bucket": BUCKET,
-            "object_name": f"fuel_prices_raw/daily_fuel_prices_stage/{parquet_file}",
+            "object_name": f"fuel_prices/raw/daily_fuel_prices/{parquet_file}",
             "local_file": f"{path_to_local_home}/{parquet_file}",
         },
     )
@@ -152,11 +117,11 @@ with DAG(
             "tableReference": {
                 "projectId": PROJECT_ID,
                 "datasetId": BIGQUERY_DATASET,
-                "tableId": "stg_daily_fuel_prices",
+                "tableId": "raw_daily_fuel_prices",
             },
             "externalDataConfiguration": {
                 "sourceFormat": "PARQUET",
-                "sourceUris": [f"gs://{BUCKET}/fuel_prices_raw/daily_fuel_prices_stage/{parquet_file}"],
+                "sourceUris": [f"gs://{BUCKET}/fuel_prices/raw/daily_fuel_prices/*"]
             },
         },
     )
