@@ -38,7 +38,7 @@ The final table created by this pipeline is integrated with our operational syst
 
 ### Architecture
 
-![Pipeline architecture](images/architecture.png?raw=true "Pipeline architecture")
+![Pipeline architecture](images/architecture.png "Pipeline architecture")
 
 ## Set Up
 
