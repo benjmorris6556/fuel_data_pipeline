@@ -1,0 +1,99 @@
+
+version: 2
+
+sources:
+    - name: staging
+      database: "{{ env_var('GCP_PROJECT_ID') }}"
+      schema: daily_fuel_data
+      tables:
+        - name: raw_daily_fuel_prices
+        - name: raw_historical_fuel_prices
+
+models:
+  - name: stg_daily_fuel_prices
+    description: >
+      Recent fuel prices pulled directly from the public API made available by AIP. These are the most recent daily prices that are not yet available in the historical data. 
+    columns:
+      - name: date
+        description: "The date of the fuel prices apply to"
+        tests:
+          - unique
+          - not_null
+      - name: sydney
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Sydney, inclusive of GST"
+        tests:
+          - not_null
+      - name: melbourne
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Melbourne, inclusive of GST"
+        tests:
+          - not_null
+      - name: brisbane
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Brisbane, inclusive of GST"
+        tests:
+          - not_null
+      - name: adelaide
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Adelaide, inclusive of GST"
+        tests:
+          - not_null
+      - name: darwin
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Darwin, inclusive of GST"
+        tests:
+          - not_null
+      - name: perth
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Perth, inclusive of GST"
+        tests:
+          - not_null
+      - name: hobart
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Hobart, inclusive of GST"
+        tests:
+          - not_null
+      - name: national_average
+        description: >
+          The average of each state's average Terminal Gate Price (TGP) for diesel fuel, inclusive of GST. The exact formula used by AIP to calculate
+          the National Average is unknown (it is based on particular weightings for each state), so this is used until the historical data for each date is made available. 
+        tests:
+          - not_null
+
+  - name: stg_historical_fuel_prices
+    description: >
+      Historical fuel prices published for dates up until the last Friday. 
+    columns:
+      - name: date
+        description: "The date of the fuel prices apply to"
+        tests:
+          - unique
+          - not_null
+      - name: sydney
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Sydney, inclusive of GST"
+        tests:
+          - not_null
+      - name: melbourne
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Melbourne, inclusive of GST"
+        tests:
+          - not_null
+      - name: brisbane
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Brisbane, inclusive of GST"
+        tests:
+          - not_null
+      - name: adelaide
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Adelaide, inclusive of GST"
+        tests:
+          - not_null
+      - name: darwin
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Darwin, inclusive of GST"
+        tests:
+          - not_null
+      - name: perth
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Perth, inclusive of GST"
+        tests:
+          - not_null
+      - name: hobart
+        description: "The average Terminal Gate Price (TGP) for diesel fuel in Hobart, inclusive of GST"
+        tests:
+          - not_null
+      - name: national_average
+        description: >
+          The average of each state's average Terminal Gate Price (TGP) for diesel fuel, inclusive of GST. These are the preferred figures to be used if available due to the National Average
+          being more accurate than a manually calculated National Average.  
+        tests:
+          - not_null

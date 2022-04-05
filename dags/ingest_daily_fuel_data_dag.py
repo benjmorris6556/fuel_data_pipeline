@@ -14,6 +14,7 @@ from google.cloud import storage
 PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
 BUCKET = os.environ.get("GCP_GCS_BUCKET")
 BIGQUERY_DATASET = os.environ.get("BIGQUERY_DATASET", 'daily_fuel_data')
+DBT_PROFILE_PATH = os.environ.get("DBT_PROFILES_DIR")
 
 path_to_local_home = os.environ.get("AIRFLOW_HOME", "/opt/airflow/")
 csv_file = 'daily_fuel_data_{{ execution_date.strftime(\'%d-%b-%Y\') }}.csv'
@@ -29,21 +30,22 @@ def get_current_fuel_data(file_destination):
     results = requests.get(url)
     fuel_data_json = results.json()
 
-    def create_rows(csv_rows, data):
+    def create_rows(result_rows, data):
         row = {}
         row['date'] = data['date']
         row['location'] = data['location']
         row['fuel_price'] = data['fuelPrice']
-        csv_rows.append(row)
+        row['date_created'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        result_rows.append(row)
         
-    csv_rows = []
+    result_rows = []
 
     for location, daily_data in fuel_data_json.items():
         for day, data in daily_data.items():
             if data['fuelType'] == 'DIESEL' and day == '0':
-                create_rows(csv_rows, data)
+                create_rows(result_rows, data)
             
-    df = pd.DataFrame.from_dict(csv_rows)
+    df = pd.DataFrame.from_dict(result_rows)
     df.to_csv(file_destination, index=False)
 
 def format_to_parquet(src_file, dest_file):
@@ -72,7 +74,7 @@ default_args = {
 
 with DAG(
     dag_id="daily_fuel_data_ingestion",
-    schedule_interval="@daily",
+    schedule_interval="30 10 * * 1-5",
     default_args=default_args,
     catchup=True,
     max_active_runs=3,
@@ -126,4 +128,9 @@ with DAG(
         },
     )
 
-    create_dataset_task >> format_to_parquet_task >> local_to_gcs_task >> delete_local_file_task >> bigquery_external_table_task
+    dbt_run = BashOperator(
+        task_id="dbt_run",
+        bash_command=f"cd {path_to_local_home}/dbt && pwd && dbt deps && dbt run --profiles-dir ."
+    )
+
+    create_dataset_task >> format_to_parquet_task >> local_to_gcs_task >> delete_local_file_task >> bigquery_external_table_task >> dbt_run

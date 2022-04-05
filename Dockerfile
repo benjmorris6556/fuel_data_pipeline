@@ -3,12 +3,15 @@ FROM apache/airflow:2.2.4
 ENV AIRFLOW_HOME=/opt/airflow
 
 USER root
-RUN apt-get update -qq && apt-get install vim -qqq
+RUN apt-get update -qq && apt-get install vim -qqq 
+
+RUN python -m pip install --upgrade pip setuptools wheel --no-cache-dir
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Ref: https://airflow.apache.org/docs/docker-stack/recipes.html
+# ARG dbt_bigquery_ref=dbt-bigquery@v1.0.0
+# RUN python -m pip install --no-cache-dir "git+https://github.com/dbt-labs/${dbt_bigquery_ref}#egg=dbt-bigquery"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-e", "-u", "-x", "-c"]
 

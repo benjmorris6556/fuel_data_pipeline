@@ -14,7 +14,7 @@ x-airflow-common:
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKEND: 'airflow.api.auth.backend.basic_auth'
-    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- openpyxl==3.0.9}
+    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- openpyxl==3.0.9 dbt-bigquery==1.0.0}
     GOOGLE_APPLICATION_CREDENTIALS: $GOOGLE_APPLICATION_CREDENTIALS
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: $AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT
     GCP_PROJECT_ID: $GCP_PROJECT_ID
@@ -24,6 +24,8 @@ x-airflow-common:
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ~/.google/credentials/:/.google/credentials:ro
+    - ./dbt:/opt/airflow/dbt
+    - ~/.dbt:/root/.dbt
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on

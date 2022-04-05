@@ -37,6 +37,8 @@ def get_historical_fuel_data(source_url, dest_file):
     )
 
     fuel_prices_df.columns = fuel_prices_df.columns.str.lower()
+    fuel_prices_df = fuel_prices_df.tail(5)
+    fuel_prices_df['date_created'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     fuel_prices_df.to_csv(dest_file, index=False)
 
@@ -66,7 +68,7 @@ default_args = {
 
 with DAG(
     dag_id="historical_fuel_data_ingestion",
-    schedule_interval="0 10 * * 5",
+    schedule_interval="0 11 * * 5",
     default_args=default_args,
     catchup=False,
     max_active_runs=3,
